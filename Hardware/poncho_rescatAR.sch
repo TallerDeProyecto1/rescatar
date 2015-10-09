@@ -184,7 +184,7 @@ RESET
 Text Label 1250 2300 0    60   ~ 0
 VCC_3.3V
 Text Label 5200 6750 0    60   ~ 0
-VCC_3.3V
+VCC_5V
 $Comp
 L CONN_8 P?
 U 1 1 56167705
