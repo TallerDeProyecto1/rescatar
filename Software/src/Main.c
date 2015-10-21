@@ -175,6 +175,9 @@ TASK(InitTask)
 	/*se realizan las configuraciones iniciales del MPU*/
 	MPU_6050_setup(fd_i2c,TICK);
 
+	/*
+	 * Compruebo que el sensor funciona correctamente
+	 */
 	if(!MPU_6050_test(fd_i2c))
 		ErrorHook();
 
