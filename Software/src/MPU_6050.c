@@ -247,8 +247,5 @@ uint8_t  MPU_6050_setup(int32_t	fd_i2c,uint16 tick){
 	 */
 	MPU_6050_calibrate(fd_i2c);
 
-	/*
-	 * Compruebo que el sensor funciona correctamente
-	 */
 	return 1;
 }
