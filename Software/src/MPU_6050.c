@@ -6,11 +6,6 @@
 
 /*==================[macros]=================================================*/
 
-#define GRAV 		-9.81
-#define PESO 		0.95
-#define RADAGRA 	57.3   			// 180/pi
-#define PHI 		3.141592
-
 /*==================[internal data declaration]==============================*/
 
 /*en esta estructura guardo los offset luego de la calibracion*/

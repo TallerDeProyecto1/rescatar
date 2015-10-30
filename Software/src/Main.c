@@ -87,6 +87,12 @@ static int32_t fd_i2c;
  */
 static int32_t fd_uart1;
 
+/** \brief File descriptor of the rs232
+ *
+ * Device path /dev/serial/uart/2
+ */
+static int32_t fd_uart2;
+
 
 /*==================[external data definition]===============================*/
 
@@ -156,6 +162,15 @@ TASK(InitTask)
 
 	/* change FIFO TRIGGER LEVEL for uart usb */
 	ciaaPOSIX_ioctl(fd_uart1, ciaaPOSIX_IOCTL_SET_FIFO_TRIGGER_LEVEL, (void *)ciaaFIFO_TRIGGER_LEVEL3);
+
+	/* open UART connected to RS232 connector */
+	fd_uart2 = ciaaPOSIX_open("/dev/serial/uart/2", O_RDWR|O_NONBLOCK);
+	//	fd_uart2 = ciaaPOSIX_open("/dev/serial/uart/2", O_RDWR);
+
+	/* change baud rate for uart usb */
+	ciaaPOSIX_ioctl(fd_uart2, ciaaPOSIX_IOCTL_SET_BAUDRATE, (void *)ciaaBAUDRATE_115200);
+	ciaaPOSIX_ioctl(fd_uart1, ciaaPOSIX_IOCTL_SET_BAUDRATE, (void *)ciaaBAUDRATE_115200);
+
 
 	/* Abro la comunicacion i2c (I2C0)*/
 	fd_i2c = ciaaPOSIX_open("/dev/i2c/0", O_RDWR);
@@ -234,13 +249,21 @@ TASK(PeriodicTask)
 		/* si se cumple este if, se llego al final de la cuenta y se debe mandar
 		 * el mensaje de auxilio*/
 		if(outputs== 0x3f){
+			//			char numero[30]="AT+CMGS=\"2346514794\"\n";
+			//			ciaaPOSIX_write(fd_uart2, numero, ciaaPOSIX_strlen(numero));
+			//			char ret=ciaaPOSIX_read(fd_uart2,numero,1);
+			//			while(numero[0]!='>')
+			//				ret=ciaaPOSIX_read(fd_uart2,numero,1);
+			//			char msg[30]="Pete";
+			//			msg[4]=0x1A;
+			//			ciaaPOSIX_write(fd_uart2, msg, ciaaPOSIX_strlen(msg));
 			/*
 			 * Aca debo configurar el mensaje a enviar por sms, y luego activar la
 			 * serial task
 			 */
 
 			/* Activates the SerialEchoTask task */
-					//ActivateTask(SerialEchoTask);
+			//ActivateTask(SerialEchoTask);
 		}
 	}
 	ciaaPOSIX_write(fd_out, &outputs, 1);
@@ -310,6 +333,16 @@ TASK(KeysTask)
  */
 TASK(SerialEchoTask)
 {
+	if(outputs== 0x3f){
+		char numero[30]="AT+CMGS=\"2346514794\"\n";
+		ciaaPOSIX_write(fd_uart2, numero, ciaaPOSIX_strlen(numero));
+		char ret=ciaaPOSIX_read(fd_uart2,numero,1);
+		while(numero[0]!='>')
+			ret=ciaaPOSIX_read(fd_uart2,numero,1);
+		char msg[30]="Pete";
+		msg[4]=0x1A;
+		ciaaPOSIX_write(fd_uart2, msg, ciaaPOSIX_strlen(msg));
+	}
 	itoa((int)MPU_data.xgyro, num, 10);
 	strcpy(message,"X=");
 	strcat(message,num);
