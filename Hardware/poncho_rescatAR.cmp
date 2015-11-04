@@ -1,0 +1,80 @@
+Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = mié 04 nov 2015 11:55:03 ART
+
+BeginCmp
+TimeStamp = /5398AC24;
+Reference = CON_E-CIAA1;
+ValeurCmp = CONN_20X2;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5398AC33;
+Reference = CON_E-CIAA2;
+ValeurCmp = CONN_20X2;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /56174B67;
+Reference = CON_SO101;
+ValeurCmp = CONN_20X2;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /56174B48;
+Reference = CON_SO104;
+ValeurCmp = CONN_20X2;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617B2D6;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /563A1A68;
+Reference = J1;
+ValeurCmp = HEADER_20X2;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /56167705;
+Reference = P2;
+ValeurCmp = CONN_8;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617AFD6;
+Reference = Q1;
+ValeurCmp = MOSFET_N;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617B2E5;
+Reference = R1;
+ValeurCmp = 330k;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617B2F2;
+Reference = R2;
+ValeurCmp = 10k;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5617B2F8;
+Reference = R3;
+ValeurCmp = 680;
+IdModule  = SM1206;
+EndCmp
+
+EndListe
