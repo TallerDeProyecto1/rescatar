@@ -36,7 +36,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "poncho_rescatAR"
-Date "29 oct 2015"
+Date "4 nov 2015"
 Rev "0.1"
 Comp ""
 Comment1 ""
@@ -387,7 +387,7 @@ L MOSFET_N Q1
 U 1 1 5617AFD6
 P 5900 6250
 F 0 "Q1" H 5910 6420 60  0000 R CNN
-F 1 "2N7002" H 5910 6100 60  0000 R CNN
+F 1 "MOSFET_N" H 5910 6100 60  0000 R CNN
 F 2 "~" H 5900 6250 60  0000 C CNN
 F 3 "~" H 5900 6250 60  0000 C CNN
 	1    5900 6250
@@ -589,7 +589,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 7450 5000 7450
 Wire Wire Line
-	5000 7350 5700 7350
+	4800 7350 5700 7350
 Wire Wire Line
 	5700 7250 5000 7250
 Wire Notes Line
@@ -855,10 +855,6 @@ Wire Wire Line
 Wire Wire Line
 	2650 7200 3300 7200
 Wire Wire Line
-	5000 7150 5000 7550
-Wire Wire Line
-	5000 7550 4450 7550
-Wire Wire Line
 	6350 3400 5800 3400
 Wire Wire Line
 	5800 3500 6350 3500
@@ -984,9 +980,6 @@ Wire Wire Line
 Text Label 5750 4900 0    60   ~ 0
 VCC_5V
 NoConn ~ 6350 3600
-Connection ~ 5000 7250
-Connection ~ 5000 7350
-Connection ~ 5000 7450
 Connection ~ 8800 800 
 NoConn ~ 2150 2900
 NoConn ~ 2150 3000
@@ -1024,4 +1017,11 @@ F 3 "" H 1900 850 60  0000 C CNN
 	1    1900 850 
 	1    0    0    -1  
 $EndComp
+NoConn ~ 5000 7450
+NoConn ~ 5000 7150
+NoConn ~ 5000 7250
+Wire Wire Line
+	4800 7350 4800 7550
+Wire Wire Line
+	4800 7550 4450 7550
 $EndSCHEMATC
