@@ -1,6 +1,6 @@
-update=mié 04 nov 2015 12:08:18 ART
+update=lun 09 nov 2015 18:36:52 ART
 version=1
-last_client=cvpcb
+last_client=eeschema
 [general]
 version=1
 [pcbnew]
@@ -41,6 +41,11 @@ LibName15=dip_sockets
 LibName16=pga_sockets
 LibName17=valves
 LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -81,8 +86,4 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=w_connectors
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+LibName32=bc338

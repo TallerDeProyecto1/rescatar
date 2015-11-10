@@ -30,6 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:w_connectors
+LIBS:bc338
 LIBS:poncho_rescatAR-cache
 EELAYER 27 0
 EELAYER END
@@ -37,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "poncho_rescatAR"
-Date "4 nov 2015"
+Date "10 nov 2015"
 Rev "0.1"
 Comp ""
 Comment1 ""
@@ -142,8 +143,6 @@ Text Label 2300 3800 0    60   ~ 0
 GND
 Text Label 2300 3900 0    60   ~ 0
 GND
-Text Label 2300 4000 0    60   ~ 0
-GPIO_GND
 Text Label 2300 4100 0    60   ~ 0
 GND
 Text Label 2300 4200 0    60   ~ 0
@@ -170,8 +169,6 @@ Text Label 8750 3400 0    60   ~ 0
 ENET_REF_CLK
 Text Label 8850 3500 0    60   ~ 0
 GND
-Text Label 8850 3600 0    60   ~ 0
-GPIO_GND
 Text Label 8850 3700 0    60   ~ 0
 SPI_MOSI
 Text Label 8900 3800 0    60   ~ 0
@@ -384,17 +381,6 @@ F 3 "~" H 6000 5750 30  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MOSFET_N Q1
-U 1 1 5617AFD6
-P 5900 6250
-F 0 "Q1" H 5910 6420 60  0000 R CNN
-F 1 "MOSFET_N" H 5910 6100 60  0000 R CNN
-F 2 "~" H 5900 6250 60  0000 C CNN
-F 3 "~" H 5900 6250 60  0000 C CNN
-	1    5900 6250
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR01
 U 1 1 5617B031
 P 5250 6250
@@ -472,15 +458,15 @@ Rx de la edu-ciaa se conecta con\nRx del esquematico del GE864 Rx \ntambien (Lo 
 $Comp
 L VCC #PWR03
 U 1 1 5630345C
-P 3100 850
-F 0 "#PWR03" H 3100 950 30  0001 C CNN
-F 1 "VCC" H 3100 950 30  0000 C CNN
-F 2 "" H 3100 850 60  0000 C CNN
-F 3 "" H 3100 850 60  0000 C CNN
-	1    3100 850 
+P 3250 1100
+F 0 "#PWR03" H 3250 1200 30  0001 C CNN
+F 1 "VCC" H 3250 1200 30  0000 C CNN
+F 2 "" H 3250 1100 60  0000 C CNN
+F 3 "" H 3250 1100 60  0000 C CNN
+	1    3250 1100
 	1    0    0    -1  
 $EndComp
-Text Label 3300 850  0    60   ~ 0
+Text Label 3450 1100 0    60   ~ 0
 VCC_3.8V_I
 Text Label 5900 2900 0    60   ~ 0
 GND
@@ -536,7 +522,7 @@ Text Label 3500 3300 0    60   ~ 0
 GND
 Text Label 3450 2900 0    60   ~ 0
 GND
-Text Notes 3000 700  0    60   ~ 0
+Text Notes 3150 950  0    60   ~ 0
 Bateria de celular:
 NoConn ~ 5500 2750
 Text Label 5250 6850 0    60   ~ 0
@@ -548,6 +534,150 @@ GND
 Text Notes 4850 8000 0    60   ~ 0
 Habria que ver esto si pasa algo\nque int, xda y xcl esten en GND.\nAD0 debe estar a GND para\nseleccionar la direccion 0x68
 NoConn ~ 700  2900
+Text Label 8750 4300 0    60   ~ 0
+GE864_RESET
+Text Label 8750 4400 0    60   ~ 0
+GE864_ON_OFF
+$Comp
+L GND #PWR04
+U 1 1 5632866F
+P 2800 1100
+F 0 "#PWR04" H 2800 1100 30  0001 C CNN
+F 1 "GND" H 2800 1030 30  0001 C CNN
+F 2 "" H 2800 1100 60  0000 C CNN
+F 3 "" H 2800 1100 60  0000 C CNN
+	1    2800 1100
+	1    0    0    -1  
+$EndComp
+Text Label 2100 1050 0    60   ~ 0
+GND
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 5632867D
+P 1900 1050
+F 0 "#FLG05" H 1900 1145 30  0001 C CNN
+F 1 "PWR_FLAG" H 1900 1230 30  0000 C CNN
+F 2 "" H 1900 1050 60  0000 C CNN
+F 3 "" H 1900 1050 60  0000 C CNN
+	1    1900 1050
+	1    0    0    -1  
+$EndComp
+Text Label 5750 4900 0    60   ~ 0
+VCC_5V
+NoConn ~ 6350 3600
+NoConn ~ 2150 2900
+NoConn ~ 2150 3000
+NoConn ~ 2150 3100
+NoConn ~ 2150 3200
+NoConn ~ 2150 3300
+NoConn ~ 2150 3400
+Text Notes 2200 3050 0    60   ~ 0
+Estos son los\nAnalog_GND\nque no usamos
+$Comp
+L PWR_FLAG #FLG06
+U 1 1 56328677
+P 2800 850
+F 0 "#FLG06" H 2800 945 30  0001 C CNN
+F 1 "PWR_FLAG" H 2800 1030 30  0000 C CNN
+F 2 "" H 2800 850 60  0000 C CNN
+F 3 "" H 2800 850 60  0000 C CNN
+	1    2800 850 
+	1    0    0    -1  
+$EndComp
+Text Notes 1450 600  0    60   ~ 0
+Fuente externa\npara la ciaa tambien 
+Text Label 2100 850  0    60   ~ 0
+VCC_5V_EXT
+$Comp
+L VCC #PWR07
+U 1 1 56328668
+P 1900 850
+F 0 "#PWR07" H 1900 950 30  0001 C CNN
+F 1 "VCC" H 1900 950 30  0000 C CNN
+F 2 "" H 1900 850 60  0000 C CNN
+F 3 "" H 1900 850 60  0000 C CNN
+	1    1900 850 
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5000 7450
+NoConn ~ 5000 7150
+NoConn ~ 5000 7250
+$Comp
+L BC547 Q1
+U 1 1 563CF025
+P 5900 6250
+F 0 "Q1" H 5900 6101 40  0000 R CNN
+F 1 "BC547" H 5900 6400 40  0000 R CNN
+F 2 "TO92" H 5800 6352 29  0000 C CNN
+F 3 "" H 5900 6250 60  0000 C CNN
+	1    5900 6250
+	1    0    0    -1  
+$EndComp
+Text Label 8850 3600 0    60   ~ 0
+GND
+Text Label 2300 4000 0    60   ~ 0
+GND
+$Comp
+L ZENER D?
+U 1 1 5640FD64
+P 7950 1600
+F 0 "D?" H 7950 1700 50  0000 C CNN
+F 1 "ZENER" H 7950 1500 40  0000 C CNN
+F 2 "~" H 7950 1600 60  0000 C CNN
+F 3 "~" H 7950 1600 60  0000 C CNN
+	1    7950 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5640FD8C
+P 7650 1350
+F 0 "R?" V 7730 1350 40  0000 C CNN
+F 1 "R" V 7657 1351 40  0000 C CNN
+F 2 "~" V 7580 1350 30  0000 C CNN
+F 3 "~" H 7650 1350 30  0000 C CNN
+	1    7650 1350
+	0    -1   -1   0   
+$EndComp
+Text Label 8200 1800 0    60   ~ 0
+GND
+Text Label 9200 950  0    60   ~ 0
+VCC_3.8V_II
+$Comp
+L CP1 C?
+U 1 1 56411326
+P 8900 1250
+F 0 "C?" H 8950 1350 50  0000 L CNN
+F 1 "CP1" H 8950 1150 50  0000 L CNN
+F 2 "~" H 8900 1250 60  0000 C CNN
+F 3 "~" H 8900 1250 60  0000 C CNN
+	1    8900 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L BAT_CONN BAT?
+U 1 1 564115EC
+P 4250 750
+F 0 "BAT?" H 4250 900 50  0000 C CNN
+F 1 "BAT_CONN" H 4250 1000 50  0000 C CNN
+F 2 "~" H 4250 550 60  0000 C CNN
+F 3 "~" H 4250 550 60  0000 C CNN
+	1    4250 750 
+	1    0    0    -1  
+$EndComp
+Text Label 4450 1100 0    60   ~ 0
+GND
+$Comp
+L JUMPER3 JP?
+U 1 1 56423C56
+P 6900 950
+F 0 "JP?" H 6950 850 40  0000 L CNN
+F 1 "JUMPER3" H 6900 1050 40  0000 C CNN
+F 2 "~" H 6900 950 60  0000 C CNN
+F 3 "~" H 6900 950 60  0000 C CNN
+	1    6900 950 
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	4700 3400 5200 3400
 Wire Wire Line
@@ -819,89 +949,108 @@ Wire Wire Line
 Wire Wire Line
 	5200 5400 5700 5400
 Wire Wire Line
-	3100 850  4000 850 
-Wire Wire Line
 	6350 3400 5800 3400
 Wire Wire Line
 	5800 3500 6350 3500
-Text Label 8750 4300 0    60   ~ 0
-GE864_RESET
-Text Label 8750 4400 0    60   ~ 0
-GE864_ON_OFF
-$Comp
-L GND #PWR04
-U 1 1 5632866F
-P 2800 1200
-F 0 "#PWR04" H 2800 1200 30  0001 C CNN
-F 1 "GND" H 2800 1130 30  0001 C CNN
-F 2 "" H 2800 1200 60  0000 C CNN
-F 3 "" H 2800 1200 60  0000 C CNN
-	1    2800 1200
-	1    0    0    -1  
-$EndComp
-Text Label 2100 1150 0    60   ~ 0
-GND
-$Comp
-L PWR_FLAG #FLG05
-U 1 1 5632867D
-P 1900 1150
-F 0 "#FLG05" H 1900 1245 30  0001 C CNN
-F 1 "PWR_FLAG" H 1900 1330 30  0000 C CNN
-F 2 "" H 1900 1150 60  0000 C CNN
-F 3 "" H 1900 1150 60  0000 C CNN
-	1    1900 1150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2800 1200 2800 1150
-Wire Wire Line
-	2800 1150 1900 1150
 Wire Wire Line
 	6000 4900 5700 4900
-Text Label 5750 4900 0    60   ~ 0
-VCC_5V
-NoConn ~ 6350 3600
-NoConn ~ 2150 2900
-NoConn ~ 2150 3000
-NoConn ~ 2150 3100
-NoConn ~ 2150 3200
-NoConn ~ 2150 3300
-NoConn ~ 2150 3400
-Text Notes 2200 3050 0    60   ~ 0
-Estos son los\nAnalog_GND\nque no usamos
 Wire Wire Line
 	1900 850  2800 850 
-$Comp
-L PWR_FLAG #FLG06
-U 1 1 56328677
-P 2800 850
-F 0 "#FLG06" H 2800 945 30  0001 C CNN
-F 1 "PWR_FLAG" H 2800 1030 30  0000 C CNN
-F 2 "" H 2800 850 60  0000 C CNN
-F 3 "" H 2800 850 60  0000 C CNN
-	1    2800 850 
-	1    0    0    -1  
-$EndComp
-Text Notes 1450 600  0    60   ~ 0
-Fuente externa\npara la ciaa tambien 
-Text Label 2100 850  0    60   ~ 0
-VCC_5V_EXT
-$Comp
-L VCC #PWR07
-U 1 1 56328668
-P 1900 850
-F 0 "#PWR07" H 1900 950 30  0001 C CNN
-F 1 "VCC" H 1900 950 30  0000 C CNN
-F 2 "" H 1900 850 60  0000 C CNN
-F 3 "" H 1900 850 60  0000 C CNN
-	1    1900 850 
-	1    0    0    -1  
-$EndComp
-NoConn ~ 5000 7450
-NoConn ~ 5000 7150
-NoConn ~ 5000 7250
 Wire Wire Line
 	4800 7350 4800 7550
 Wire Wire Line
 	4800 7550 4450 7550
+Wire Wire Line
+	7900 1350 7950 1350
+Wire Wire Line
+	7950 1250 7950 1350
+Wire Wire Line
+	7950 1350 7950 1400
+Connection ~ 7950 1350
+Wire Wire Line
+	7150 950  7400 950 
+Wire Wire Line
+	7400 950  7750 950 
+Wire Wire Line
+	7400 1350 7400 950 
+Connection ~ 7400 950 
+Wire Wire Line
+	8150 950  8900 950 
+Wire Wire Line
+	8900 950  10250 950 
+Wire Wire Line
+	7950 1800 8900 1800
+Wire Wire Line
+	8900 1800 9300 1800
+Wire Wire Line
+	8900 1050 8900 950 
+Connection ~ 8900 950 
+Wire Wire Line
+	8900 1450 8900 1800
+Connection ~ 8900 1800
+Wire Wire Line
+	3250 1100 4100 1100
+Wire Wire Line
+	4100 1100 4100 950 
+Wire Wire Line
+	4400 950  4400 1100
+Wire Wire Line
+	4400 1100 4650 1100
+Wire Wire Line
+	6650 950  5750 950 
+Wire Wire Line
+	6900 1050 6900 1300
+Wire Wire Line
+	6900 1300 5750 1300
+Text Label 5950 950  0    60   ~ 0
+VCC_5V_EXT
+Text Label 5900 1300 0    60   ~ 0
+VCC_5V
+$Comp
+L JUMPER3 JP?
+U 1 1 56423E4B
+P 10500 950
+F 0 "JP?" H 10550 850 40  0000 L CNN
+F 1 "JUMPER3" H 10500 1050 40  0000 C CNN
+F 2 "~" H 10500 950 60  0000 C CNN
+F 3 "~" H 10500 950 60  0000 C CNN
+	1    10500 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 1050 10500 1300
+Wire Wire Line
+	10500 1300 9800 1300
+Text Label 9850 1300 0    60   ~ 0
+VCC_3.8V_I
+Wire Wire Line
+	10750 950  11150 950 
+Text Label 10800 950  0    60   ~ 0
+VCC_3.8V
+$Comp
+L CONN_2 P?
+U 1 1 56424087
+P 1550 950
+F 0 "P?" V 1500 950 40  0000 C CNN
+F 1 "CONN_2" V 1600 950 40  0000 C CNN
+F 2 "" H 1550 950 60  0000 C CNN
+F 3 "" H 1550 950 60  0000 C CNN
+	1    1550 950 
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 1050 2800 1050
+Wire Wire Line
+	2800 1050 2800 1100
+$Comp
+L BC338 Q?
+U 1 1 564243D8
+P 7950 1050
+F 0 "Q?" H 7950 901 40  0000 R CNN
+F 1 "BC338" H 7950 1200 40  0000 R CNN
+F 2 "TO92" H 7850 1152 29  0000 C CNN
+F 3 "~" H 7950 1050 60  0000 C CNN
+	1    7950 1050
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
