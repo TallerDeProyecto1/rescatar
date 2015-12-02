@@ -38,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "poncho_rescatAR"
-Date "10 nov 2015"
+Date "2 dec 2015"
 Rev "0.1"
 Comp ""
 Comment1 ""
@@ -235,8 +235,6 @@ Text Label 5300 7150 0    60   ~ 0
 XDA
 Text Label 5300 7250 0    60   ~ 0
 XCL
-Text Label 5300 7350 0    60   ~ 0
-AD0
 Text Label 5300 7450 0    60   ~ 0
 INT
 $Comp
@@ -347,62 +345,7 @@ F 3 "~" H 6000 5150 60  0000 C CNN
 	1    6000 5150
 	0    1    1    0   
 $EndComp
-$Comp
-L R R1
-U 1 1 5617B2E5
-P 5250 5750
-F 0 "R1" V 5330 5750 40  0000 C CNN
-F 1 "330k" V 5257 5751 40  0000 C CNN
-F 2 "~" V 5180 5750 30  0000 C CNN
-F 3 "~" H 5250 5750 30  0000 C CNN
-	1    5250 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R2
-U 1 1 5617B2F2
-P 5700 5750
-F 0 "R2" V 5780 5750 40  0000 C CNN
-F 1 "10k" V 5707 5751 40  0000 C CNN
-F 2 "~" V 5630 5750 30  0000 C CNN
-F 3 "~" H 5700 5750 30  0000 C CNN
-	1    5700 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R3
-U 1 1 5617B2F8
-P 6000 5750
-F 0 "R3" V 6080 5750 40  0000 C CNN
-F 1 "680" V 6007 5751 40  0000 C CNN
-F 2 "~" V 5930 5750 30  0000 C CNN
-F 3 "~" H 6000 5750 30  0000 C CNN
-	1    6000 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR01
-U 1 1 5617B031
-P 5250 6250
-F 0 "#PWR01" H 5250 6250 30  0001 C CNN
-F 1 "GND" H 5250 6180 30  0001 C CNN
-F 2 "" H 5250 6250 60  0000 C CNN
-F 3 "" H 5250 6250 60  0000 C CNN
-	1    5250 6250
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
-U 1 1 5617B5C3
-P 6000 6500
-F 0 "#PWR02" H 6000 6500 30  0001 C CNN
-F 1 "GND" H 6000 6430 30  0001 C CNN
-F 2 "" H 6000 6500 60  0000 C CNN
-F 3 "" H 6000 6500 60  0000 C CNN
-	1    6000 6500
-	1    0    0    -1  
-$EndComp
-Text Label 5250 5400 0    60   ~ 0
+Text Label 5800 6250 0    60   ~ 0
 STATUS_LED
 NoConn ~ 700  2700
 NoConn ~ 700  2800
@@ -456,10 +399,10 @@ Acá podriamos conectar algun GPIO\nal la linea INT del acelerometro y a la\nlin
 Text Notes 4800 2900 0    35   ~ 0
 Rx de la edu-ciaa se conecta con\nRx del esquematico del GE864 Rx \ntambien (Lo determinamos por\nprueba y error)
 $Comp
-L VCC #PWR03
+L VCC #PWR01
 U 1 1 5630345C
 P 3250 1100
-F 0 "#PWR03" H 3250 1200 30  0001 C CNN
+F 0 "#PWR01" H 3250 1200 30  0001 C CNN
 F 1 "VCC" H 3250 1200 30  0000 C CNN
 F 2 "" H 3250 1100 60  0000 C CNN
 F 3 "" H 3250 1100 60  0000 C CNN
@@ -467,7 +410,7 @@ F 3 "" H 3250 1100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3450 1100 0    60   ~ 0
-VCC_3.8V_I
+VCC_12V
 Text Label 5900 2900 0    60   ~ 0
 GND
 Text Label 5900 3000 0    60   ~ 0
@@ -522,48 +465,18 @@ Text Label 3500 3300 0    60   ~ 0
 GND
 Text Label 3450 2900 0    60   ~ 0
 GND
-Text Notes 3150 950  0    60   ~ 0
-Bateria de celular:
 NoConn ~ 5500 2750
 Text Label 5250 6850 0    60   ~ 0
 GND
 Text Notes 3550 1600 0    60   ~ 0
 Los "X" que no tienen comentarios\n son los que estan sin asignar en el\nesquematico del fabricante, o pines\nque no utilizamos\n
-Text Label 4600 7550 0    60   ~ 0
+Text Label 5250 7350 0    60   ~ 0
 GND
-Text Notes 4850 8000 0    60   ~ 0
-Habria que ver esto si pasa algo\nque int, xda y xcl esten en GND.\nAD0 debe estar a GND para\nseleccionar la direccion 0x68
 NoConn ~ 700  2900
 Text Label 8750 4300 0    60   ~ 0
 GE864_RESET
 Text Label 8750 4400 0    60   ~ 0
 GE864_ON_OFF
-$Comp
-L GND #PWR04
-U 1 1 5632866F
-P 2800 1100
-F 0 "#PWR04" H 2800 1100 30  0001 C CNN
-F 1 "GND" H 2800 1030 30  0001 C CNN
-F 2 "" H 2800 1100 60  0000 C CNN
-F 3 "" H 2800 1100 60  0000 C CNN
-	1    2800 1100
-	1    0    0    -1  
-$EndComp
-Text Label 2100 1050 0    60   ~ 0
-GND
-$Comp
-L PWR_FLAG #FLG05
-U 1 1 5632867D
-P 1900 1050
-F 0 "#FLG05" H 1900 1145 30  0001 C CNN
-F 1 "PWR_FLAG" H 1900 1230 30  0000 C CNN
-F 2 "" H 1900 1050 60  0000 C CNN
-F 3 "" H 1900 1050 60  0000 C CNN
-	1    1900 1050
-	1    0    0    -1  
-$EndComp
-Text Label 5750 4900 0    60   ~ 0
-VCC_5V
 NoConn ~ 6350 3600
 NoConn ~ 2150 2900
 NoConn ~ 2150 3000
@@ -573,92 +486,18 @@ NoConn ~ 2150 3300
 NoConn ~ 2150 3400
 Text Notes 2200 3050 0    60   ~ 0
 Estos son los\nAnalog_GND\nque no usamos
-$Comp
-L PWR_FLAG #FLG06
-U 1 1 56328677
-P 2800 850
-F 0 "#FLG06" H 2800 945 30  0001 C CNN
-F 1 "PWR_FLAG" H 2800 1030 30  0000 C CNN
-F 2 "" H 2800 850 60  0000 C CNN
-F 3 "" H 2800 850 60  0000 C CNN
-	1    2800 850 
-	1    0    0    -1  
-$EndComp
-Text Notes 1450 600  0    60   ~ 0
-Fuente externa\npara la ciaa tambien 
-Text Label 2100 850  0    60   ~ 0
-VCC_5V_EXT
-$Comp
-L VCC #PWR07
-U 1 1 56328668
-P 1900 850
-F 0 "#PWR07" H 1900 950 30  0001 C CNN
-F 1 "VCC" H 1900 950 30  0000 C CNN
-F 2 "" H 1900 850 60  0000 C CNN
-F 3 "" H 1900 850 60  0000 C CNN
-	1    1900 850 
-	1    0    0    -1  
-$EndComp
 NoConn ~ 5000 7450
 NoConn ~ 5000 7150
 NoConn ~ 5000 7250
-$Comp
-L BC547 Q1
-U 1 1 563CF025
-P 5900 6250
-F 0 "Q1" H 5900 6101 40  0000 R CNN
-F 1 "BC547" H 5900 6400 40  0000 R CNN
-F 2 "TO92" H 5800 6352 29  0000 C CNN
-F 3 "" H 5900 6250 60  0000 C CNN
-	1    5900 6250
-	1    0    0    -1  
-$EndComp
 Text Label 8850 3600 0    60   ~ 0
 GND
 Text Label 2300 4000 0    60   ~ 0
 GND
 $Comp
-L ZENER D?
-U 1 1 5640FD64
-P 7950 1600
-F 0 "D?" H 7950 1700 50  0000 C CNN
-F 1 "ZENER" H 7950 1500 40  0000 C CNN
-F 2 "~" H 7950 1600 60  0000 C CNN
-F 3 "~" H 7950 1600 60  0000 C CNN
-	1    7950 1600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R?
-U 1 1 5640FD8C
-P 7650 1350
-F 0 "R?" V 7730 1350 40  0000 C CNN
-F 1 "R" V 7657 1351 40  0000 C CNN
-F 2 "~" V 7580 1350 30  0000 C CNN
-F 3 "~" H 7650 1350 30  0000 C CNN
-	1    7650 1350
-	0    -1   -1   0   
-$EndComp
-Text Label 8200 1800 0    60   ~ 0
-GND
-Text Label 9200 950  0    60   ~ 0
-VCC_3.8V_II
-$Comp
-L CP1 C?
-U 1 1 56411326
-P 8900 1250
-F 0 "C?" H 8950 1350 50  0000 L CNN
-F 1 "CP1" H 8950 1150 50  0000 L CNN
-F 2 "~" H 8900 1250 60  0000 C CNN
-F 3 "~" H 8900 1250 60  0000 C CNN
-	1    8900 1250
-	1    0    0    -1  
-$EndComp
-$Comp
-L BAT_CONN BAT?
+L BAT_CONN BAT1
 U 1 1 564115EC
 P 4250 750
-F 0 "BAT?" H 4250 900 50  0000 C CNN
+F 0 "BAT1" H 4250 900 50  0000 C CNN
 F 1 "BAT_CONN" H 4250 1000 50  0000 C CNN
 F 2 "~" H 4250 550 60  0000 C CNN
 F 3 "~" H 4250 550 60  0000 C CNN
@@ -668,14 +507,132 @@ $EndComp
 Text Label 4450 1100 0    60   ~ 0
 GND
 $Comp
-L JUMPER3 JP?
-U 1 1 56423C56
-P 6900 950
-F 0 "JP?" H 6950 850 40  0000 L CNN
-F 1 "JUMPER3" H 6900 1050 40  0000 C CNN
-F 2 "~" H 6900 950 60  0000 C CNN
-F 3 "~" H 6900 950 60  0000 C CNN
-	1    6900 950 
+L LM317T U1
+U 1 1 565C63CE
+P 7000 850
+F 0 "U1" H 6800 1050 40  0000 C CNN
+F 1 "LM317T" H 7000 1050 40  0000 L CNN
+F 2 "TO-220" H 7000 950 30  0000 C CIN
+F 3 "" H 7000 850 60  0000 C CNN
+	1    7000 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 565C63FB
+P 7650 1100
+F 0 "R5" V 7730 1100 40  0000 C CNN
+F 1 "220" V 7657 1101 40  0000 C CNN
+F 2 "~" V 7580 1100 30  0000 C CNN
+F 3 "~" H 7650 1100 30  0000 C CNN
+	1    7650 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 565C6408
+P 7000 1700
+F 0 "R4" V 7080 1700 40  0000 C CNN
+F 1 "470" V 7007 1701 40  0000 C CNN
+F 2 "~" V 6930 1700 30  0000 C CNN
+F 3 "~" H 7000 1700 30  0000 C CNN
+	1    7000 1700
+	1    0    0    -1  
+$EndComp
+Text Label 5950 2000 0    60   ~ 0
+GND
+Text Label 6150 800  0    60   ~ 0
+VCC_12V
+Text Label 8350 800  0    60   ~ 0
+VCC_3.8V
+$Comp
+L CP1 C1
+U 1 1 565C6973
+P 8500 1250
+F 0 "C1" H 8550 1350 50  0000 L CNN
+F 1 "10uF" H 8550 1150 50  0000 L CNN
+F 2 "~" H 8500 1250 60  0000 C CNN
+F 3 "~" H 8500 1250 60  0000 C CNN
+	1    8500 1250
+	1    0    0    -1  
+$EndComp
+Text Label 9100 800  0    60   ~ 0
+VCC_12V
+$Comp
+L CP1 C2
+U 1 1 565C6DF9
+P 10550 1250
+F 0 "C2" H 10600 1350 50  0000 L CNN
+F 1 "10uF" H 10600 1150 50  0000 L CNN
+F 2 "~" H 10550 1250 60  0000 C CNN
+F 3 "~" H 10550 1250 60  0000 C CNN
+	1    10550 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_2 P1
+U 1 1 565CADCA
+P 11100 900
+F 0 "P1" V 11050 900 40  0000 C CNN
+F 1 "5V_OUT" V 11150 900 40  0000 C CNN
+F 2 "" H 11100 900 60  0000 C CNN
+F 3 "" H 11100 900 60  0000 C CNN
+	1    11100 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM7805 U2
+U 1 1 565DCE78
+P 9900 850
+F 0 "U2" H 10050 654 60  0000 C CNN
+F 1 "LM7805" H 9900 1050 60  0000 C CNN
+F 2 "" H 9900 850 60  0000 C CNN
+F 3 "" H 9900 850 60  0000 C CNN
+	1    9900 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C4
+U 1 1 565EEA3E
+P 8100 1250
+F 0 "C4" H 8100 1350 40  0000 L CNN
+F 1 "0.1" H 8106 1165 40  0000 L CNN
+F 2 "~" H 8138 1100 30  0000 C CNN
+F 3 "~" H 8100 1250 60  0000 C CNN
+	1    8100 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 565EECEE
+P 6400 1200
+F 0 "C3" H 6400 1300 40  0000 L CNN
+F 1 "0.1" H 6406 1115 40  0000 L CNN
+F 2 "~" H 6438 1050 30  0000 C CNN
+F 3 "~" H 6400 1200 60  0000 C CNN
+	1    6400 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 565EEF20
+P 10300 1250
+F 0 "C6" H 10300 1350 40  0000 L CNN
+F 1 "0.1" H 10306 1165 40  0000 L CNN
+F 2 "~" H 10338 1100 30  0000 C CNN
+F 3 "~" H 10300 1250 60  0000 C CNN
+	1    10300 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 565EEF26
+P 9400 1250
+F 0 "C5" H 9400 1350 40  0000 L CNN
+F 1 "0.1" H 9406 1165 40  0000 L CNN
+F 2 "~" H 9438 1100 30  0000 C CNN
+F 3 "~" H 9400 1250 60  0000 C CNN
+	1    9400 1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -694,8 +651,6 @@ Wire Wire Line
 	3400 2900 3900 2900
 Wire Wire Line
 	5700 7450 5000 7450
-Wire Wire Line
-	4800 7350 5700 7350
 Wire Wire Line
 	5700 7250 5000 7250
 Wire Notes Line
@@ -931,63 +886,15 @@ Wire Wire Line
 Wire Wire Line
 	6350 4600 5800 4600
 Wire Wire Line
-	5250 6000 5250 6250
-Wire Wire Line
-	5700 6250 5700 6000
-Wire Wire Line
-	5700 5500 5250 5500
-Wire Wire Line
-	6000 6050 6000 6000
-Wire Wire Line
 	6000 4900 6000 4950
 Wire Wire Line
-	6000 5350 6000 5500
-Wire Wire Line
-	6000 6450 6000 6500
-Wire Wire Line
-	5700 5400 5700 5500
-Wire Wire Line
-	5200 5400 5700 5400
+	6000 5950 6000 6250
 Wire Wire Line
 	6350 3400 5800 3400
 Wire Wire Line
 	5800 3500 6350 3500
 Wire Wire Line
 	6000 4900 5700 4900
-Wire Wire Line
-	1900 850  2800 850 
-Wire Wire Line
-	4800 7350 4800 7550
-Wire Wire Line
-	4800 7550 4450 7550
-Wire Wire Line
-	7900 1350 7950 1350
-Wire Wire Line
-	7950 1250 7950 1350
-Wire Wire Line
-	7950 1350 7950 1400
-Connection ~ 7950 1350
-Wire Wire Line
-	7150 950  7400 950 
-Wire Wire Line
-	7400 950  7750 950 
-Wire Wire Line
-	7400 1350 7400 950 
-Connection ~ 7400 950 
-Wire Wire Line
-	8150 950  8900 950 
-Wire Wire Line
-	8900 950  10250 950 
-Wire Wire Line
-	7950 1800 8900 1800
-Wire Wire Line
-	8900 1800 9300 1800
-Wire Wire Line
-	8900 1050 8900 950 
-Connection ~ 8900 950 
-Wire Wire Line
-	8900 1450 8900 1800
-Connection ~ 8900 1800
 Wire Wire Line
 	3250 1100 4100 1100
 Wire Wire Line
@@ -997,60 +904,83 @@ Wire Wire Line
 Wire Wire Line
 	4400 1100 4650 1100
 Wire Wire Line
-	6650 950  5750 950 
+	7400 800  8600 800 
 Wire Wire Line
-	6900 1050 6900 1300
+	7650 800  7650 850 
+Connection ~ 7650 800 
 Wire Wire Line
-	6900 1300 5750 1300
-Text Label 5950 950  0    60   ~ 0
-VCC_5V_EXT
-Text Label 5900 1300 0    60   ~ 0
-VCC_5V
+	7000 1100 7000 1450
+Wire Wire Line
+	7000 1950 7000 2000
+Wire Wire Line
+	5900 2000 10750 2000
+Wire Wire Line
+	6600 800  6050 800 
+Wire Wire Line
+	7650 1350 7000 1350
+Connection ~ 7000 1350
+Connection ~ 7000 2000
+Wire Wire Line
+	9500 800  9050 800 
+Wire Wire Line
+	10550 1450 10550 2000
+Wire Wire Line
+	10300 800  10750 800 
+Wire Wire Line
+	10550 1050 10550 800 
+Connection ~ 10550 800 
+Wire Wire Line
+	10750 2000 10750 1000
+Wire Wire Line
+	8500 2000 8500 1450
+Connection ~ 8500 2000
+Wire Wire Line
+	5000 7350 5700 7350
+Connection ~ 10550 2000
+Wire Wire Line
+	9900 1100 9900 2000
+Connection ~ 9900 2000
+Wire Wire Line
+	8100 1050 8100 800 
+Connection ~ 8100 800 
+Wire Wire Line
+	8100 1450 8100 2000
+Connection ~ 8100 2000
+Wire Wire Line
+	6400 1400 6400 2000
+Connection ~ 6400 2000
+Wire Wire Line
+	6400 1000 6400 800 
+Connection ~ 6400 800 
+Wire Wire Line
+	9400 1050 9400 800 
+Connection ~ 9400 800 
+Wire Wire Line
+	9400 1450 9400 2000
+Connection ~ 9400 2000
+Wire Wire Line
+	10300 1050 10300 800 
+Wire Wire Line
+	10300 1450 10300 2000
+Connection ~ 10300 2000
+Wire Wire Line
+	6000 6250 5800 6250
 $Comp
-L JUMPER3 JP?
-U 1 1 56423E4B
-P 10500 950
-F 0 "JP?" H 10550 850 40  0000 L CNN
-F 1 "JUMPER3" H 10500 1050 40  0000 C CNN
-F 2 "~" H 10500 950 60  0000 C CNN
-F 3 "~" H 10500 950 60  0000 C CNN
-	1    10500 950 
+L R R1
+U 1 1 565EF363
+P 6000 5700
+F 0 "R1" V 6080 5700 40  0000 C CNN
+F 1 "330" V 6007 5701 40  0000 C CNN
+F 2 "~" V 5930 5700 30  0000 C CNN
+F 3 "~" H 6000 5700 30  0000 C CNN
+	1    6000 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10500 1050 10500 1300
-Wire Wire Line
-	10500 1300 9800 1300
-Text Label 9850 1300 0    60   ~ 0
-VCC_3.8V_I
-Wire Wire Line
-	10750 950  11150 950 
-Text Label 10800 950  0    60   ~ 0
+	6000 5350 6000 5450
+Text Label 5750 4900 0    60   ~ 0
 VCC_3.8V
-$Comp
-L CONN_2 P?
-U 1 1 56424087
-P 1550 950
-F 0 "P?" V 1500 950 40  0000 C CNN
-F 1 "CONN_2" V 1600 950 40  0000 C CNN
-F 2 "" H 1550 950 60  0000 C CNN
-F 3 "" H 1550 950 60  0000 C CNN
-	1    1550 950 
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	1900 1050 2800 1050
-Wire Wire Line
-	2800 1050 2800 1100
-$Comp
-L BC338 Q?
-U 1 1 564243D8
-P 7950 1050
-F 0 "Q?" H 7950 901 40  0000 R CNN
-F 1 "BC338" H 7950 1200 40  0000 R CNN
-F 2 "TO92" H 7850 1152 29  0000 C CNN
-F 3 "~" H 7950 1050 60  0000 C CNN
-	1    7950 1050
-	0    -1   -1   0   
-$EndComp
+	8500 1050 8500 800 
+Connection ~ 8500 800 
 $EndSCHEMATC

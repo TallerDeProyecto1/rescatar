@@ -1,4 +1,4 @@
-update=lun 09 nov 2015 18:36:52 ART
+update=lun 30 nov 2015 16:05:26 ART
 version=1
 last_client=eeschema
 [general]
@@ -87,3 +87,7 @@ LibName29=contrib
 LibName30=valves
 LibName31=w_connectors
 LibName32=bc338
+LibName33=con-molex-2
+LibName34=con-molex
+LibName35=EP_molex_6410_7395
+LibName36=ep_molex_6410_7395-02
