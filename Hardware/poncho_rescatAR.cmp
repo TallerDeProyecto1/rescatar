@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = mié 02 dic 2015 14:23:18 ART
+Cmp-Mod V01 Created by PcbNew date = jue 03 dic 2015 16:34:12 ART
 
 BeginCmp
 TimeStamp = /564115EC;
@@ -24,29 +24,43 @@ EndCmp
 BeginCmp
 TimeStamp = /565EECEE;
 Reference = C3;
-ValeurCmp = 0.1;
+ValeurCmp = 0.1uF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
 TimeStamp = /565EEA3E;
 Reference = C4;
-ValeurCmp = 0.1;
+ValeurCmp = 0.1uF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
 TimeStamp = /565EEF26;
 Reference = C5;
-ValeurCmp = 0.1;
+ValeurCmp = 0.1uF;
 IdModule  = C1;
 EndCmp
 
 BeginCmp
 TimeStamp = /565EEF20;
 Reference = C6;
-ValeurCmp = 0.1;
+ValeurCmp = 0.1uF;
 IdModule  = C1;
+EndCmp
+
+BeginCmp
+TimeStamp = /5660923F;
+Reference = C7;
+ValeurCmp = 0.1uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /5660924E;
+Reference = C8;
+ValeurCmp = 10uF;
+IdModule  = SM0805;
 EndCmp
 
 BeginCmp
@@ -117,6 +131,13 @@ TimeStamp = /565C63FB;
 Reference = R5;
 ValeurCmp = 220;
 IdModule  = R4-LARGE_PADS;
+EndCmp
+
+BeginCmp
+TimeStamp = /5660908B;
+Reference = SW1;
+ValeurCmp = Reset_ciaa;
+IdModule  = SW_PUSH_SMALL;
 EndCmp
 
 BeginCmp
