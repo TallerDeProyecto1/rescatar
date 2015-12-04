@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = jue 03 dic 2015 16:34:12 ART
+Cmp-Mod V01 Created by PcbNew date = vie 04 dic 2015 09:29:00 ART
 
 BeginCmp
 TimeStamp = /564115EC;
@@ -144,7 +144,7 @@ BeginCmp
 TimeStamp = /565C63CE;
 Reference = U1;
 ValeurCmp = LM317T;
-IdModule  = TO220_VERT;
+IdModule  = TO220;
 EndCmp
 
 BeginCmp
