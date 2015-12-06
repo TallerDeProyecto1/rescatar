@@ -1,0 +1,121 @@
+PCBNEW-LibModule-V1  dom 06 dic 2015 09:51:06 ART
+# encoding utf-8
+Units mm
+$INDEX
+PIN_ARRAY_2X1
+heat_sink_LM3717
+heat_sink_LM3717_XL
+$EndINDEX
+$MODULE PIN_ARRAY_2X1
+Po 0 0 0 15 56642A51 00000000 ~~
+Li PIN_ARRAY_2X1
+Cd Connecteurs 2 pins
+Kw CONN DEV
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.5 -3.5 0.762 0.762 0 0.1524 N V 21 N "HEAT_SINK"
+T1 0 -1.905 0.762 0.762 0 0.1524 N I 21 N "Val**"
+DS 0 2.5 13.5 2.5 0.15 21
+DS 13.5 2.5 13.5 -2.5 0.15 21
+DS 13.5 -2.5 -13.5 -2.5 0.15 21
+DS -13.5 -2.5 -13.5 2.5 0.15 21
+DS -13.5 2.5 0 2.5 0.15 21
+$PAD
+Sh "3" C 4 4 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 9 0
+$EndPAD
+$PAD
+Sh "4" C 4 4 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -9 0
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_2x1.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE PIN_ARRAY_2X1
+$MODULE heat_sink_LM3717
+Po 0 0 0 15 56642A51 00000000 ~~
+Li heat_sink_LM3717
+Cd Connecteurs 2 pins
+Kw CONN DEV
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.5 -3.5 0.762 0.762 0 0.1524 N V 21 N "HEAT_SINK"
+T1 0 -1.905 0.762 0.762 0 0.1524 N I 21 N "Val**"
+DS 0 2.5 13.5 2.5 0.15 21
+DS 13.5 2.5 13.5 -2.5 0.15 21
+DS 13.5 -2.5 -13.5 -2.5 0.15 21
+DS -13.5 -2.5 -13.5 2.5 0.15 21
+DS -13.5 2.5 0 2.5 0.15 21
+$PAD
+Sh "3" C 4 4 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 9 0
+$EndPAD
+$PAD
+Sh "4" C 4 4 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -9 0
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_2x1.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE heat_sink_LM3717
+$MODULE heat_sink_LM3717_XL
+Po 0 0 0 15 56642F2E 00000000 ~~
+Li heat_sink_LM3717_XL
+Cd Connecteurs 2 pins
+Kw CONN DEV
+Sc 0
+AR 
+Op 0 0 0
+T0 -0.5 -3.5 0.762 0.762 0 0.1524 N V 21 N "HEAT_SINK_XL"
+T1 0 -1.905 0.762 0.762 0 0.1524 N I 21 N "Val**"
+DS -13.5 2.5 -30 2.5 0.15 21
+DS -30 2.5 -30 -2.5 0.15 21
+DS -30 -2.5 -13.5 -2.5 0.15 21
+DS 13.5 -2.5 30 -2.5 0.15 21
+DS 30 -2.5 30 2.5 0.15 21
+DS 30 2.5 13.5 2.5 0.15 21
+DS 0 2.5 13.5 2.5 0.15 21
+DS 13.5 -2.5 -13.5 -2.5 0.15 21
+DS -13.5 2.5 0 2.5 0.15 21
+$PAD
+Sh "3" C 4 4 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 22.5 0
+$EndPAD
+$PAD
+Sh "4" C 4 4 0 0 0
+Dr 1 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -22.5 0
+$EndPAD
+$SHAPE3D
+Na "pin_array/pins_array_2x1.wrl"
+Sc 1 1 1
+Of 0 0 0
+Ro 0 0 0
+$EndSHAPE3D
+$EndMODULE heat_sink_LM3717_XL
+$EndLIBRARY
