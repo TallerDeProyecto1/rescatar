@@ -1337,7 +1337,7 @@
   )
 
   (module 1pin (layer F.Cu) (tedit 56605ABD) (tstamp 566121BE)
-    (at 244.6 91.625)
+    (at 245.2 91.6)
     (descr "module 1 pin (ou trou mecanique de percage)")
     (tags DEV)
     (path 1pin)
