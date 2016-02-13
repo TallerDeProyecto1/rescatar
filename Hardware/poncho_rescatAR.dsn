@@ -1,0 +1,277 @@
+(pcb /home/manuel/rescatar/rescatar/Hardware/poncho_rescatAR.dsn
+  (parser
+    (string_quote ")
+    (space_in_quoted_tokens on)
+    (host_cad "KiCad's Pcbnew")
+    (host_version "(2013-jul-07)-stable")
+  )
+  (resolution um 10)
+  (unit um)
+  (structure
+    (layer F.Cu
+      (type signal)
+      (property
+        (index 0)
+      )
+    )
+    (layer B.Cu
+      (type signal)
+      (property
+        (index 1)
+      )
+    )
+    (boundary
+      (rect pcb 72017.9 -29486.4 218085 -191225)
+    )
+    (via "Via[0-1]_889:635_um" "Via[0-1]_889:0_um")
+    (rule
+      (width 254)
+      (clearance 254.1)
+      (clearance 254.1 (type default_smd))
+      (clearance 63.5 (type smd_smd))
+    )
+  )
+  (placement
+    (component TO92
+      (place Q1 125725 -106225 front 180 (PN BC547))
+    )
+    (component "R4-LARGE_PADS"
+      (place R1 128350 -96400 front 270 (PN 330k))
+      (place R2 134225 -96675 front 270 (PN 10k))
+      (place R3 114900 -107300 front 0 (PN 680))
+    )
+    (component pin_strip_2mm_20x2
+      (place "CON_E-CIAA1" 159050 -122700 front 270 (PN CONN_20X2))
+      (place "CON_E-CIAA2" 87300 -122775 front 270 (PN CONN_20X2))
+      (place CON_SO104 140125 -35350 front 0 (PN CONN_20X2))
+      (place CON_SO101 141625 -67475 front 0 (PN CONN_20X2))
+    )
+    (component pin_socket_2mm_8
+      (place P2 130550 -139575 front 0 (PN CONN_8))
+    )
+    (component "LED-5MM"
+      (place D1 97525 -100725 front 0 (PN LED))
+    )
+  )
+  (library
+    (image TO92
+      (outline (path signal 304.8  -1270 -2540  2540 1270))
+      (outline (path signal 304.8  2540 1270  2540 2540))
+      (outline (path signal 304.8  2540 2540  1270 3810))
+      (outline (path signal 304.8  1270 3810  -1270 3810))
+      (outline (path signal 304.8  -1270 3810  -3810 1270))
+      (outline (path signal 304.8  -3810 1270  -3810 -1270))
+      (outline (path signal 304.8  -3810 -1270  -2540 -2540))
+      (outline (path signal 304.8  -2540 -2540  -1270 -2540))
+      (pin Rect[A]Pad_1397x1397_um 1 1270 1270)
+      (pin Round[A]Pad_1397_um 2 -1270 1270)
+      (pin Round[A]Pad_1397_um 3 -1270 -1270)
+    )
+    (image "R4-LARGE_PADS"
+      (outline (path signal 304.8  -5080 0  -4064 0))
+      (outline (path signal 304.8  -4064 0  -4064 1016))
+      (outline (path signal 304.8  -4064 1016  4064 1016))
+      (outline (path signal 304.8  4064 1016  4064 -1016))
+      (outline (path signal 304.8  4064 -1016  -4064 -1016))
+      (outline (path signal 304.8  -4064 -1016  -4064 0))
+      (outline (path signal 304.8  -4064 508  -3556 1016))
+      (outline (path signal 304.8  5080 0  4064 0))
+      (pin Round[A]Pad_1778_um 1 -5080 0)
+      (pin Round[A]Pad_1778_um 2 5080 0)
+    )
+    (image pin_strip_2mm_20x2
+      (outline (path signal 304.8  -20000 0  -18000 0))
+      (outline (path signal 304.8  20000 2000  20000 -2000))
+      (outline (path signal 304.8  20000 -2000  -20000 -2000))
+      (outline (path signal 304.8  -20000 2000  20000 2000))
+      (outline (path signal 304.8  -20000 -2000  -20000 2000))
+      (outline (path signal 304.8  -18000 0  -18000 -2000))
+      (pin "Rect[A][0,-250]Pad_1300x1800_um" 1 -19000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 2 -19000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 3 -17000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 4 -17000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 5 -15000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 6 -15000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 7 -13000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 8 -13000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 9 -11000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 10 -11000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 11 -9000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 12 -9000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 13 -7000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 14 -7000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 15 -5000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 16 -5000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 17 -3000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 18 -3000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 19 -1000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 20 -1000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 21 1000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 22 1000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 23 3000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 24 3000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 25 5000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 26 5000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 27 7000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 28 7000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 29 9000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 30 9000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 31 11000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 32 11000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 33 13000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 34 13000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 35 15000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 36 15000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 37 17000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 38 17000 1000)
+      (pin "Oval[A][0,-250]Pad_1300x1800_um" 39 19000 -1000)
+      (pin Oval[A][0,250]Pad_1300x1800_um 40 19000 1000)
+    )
+    (image pin_socket_2mm_8
+      (outline (path signal 304.8  8000 1000  8000 -1000))
+      (outline (path signal 304.8  8000 -1000  -8000 -1000))
+      (outline (path signal 304.8  -8000 1000  8000 1000))
+      (outline (path signal 304.8  -8000 -1000  -8000 1000))
+      (outline (path signal 304.8  -6000 1000  -6000 -1000))
+      (pin Rect[A]Pad_1300x1800_um 1 -7000 0)
+      (pin Oval[A]Pad_1300x1800_um 2 -5000 0)
+      (pin Oval[A]Pad_1300x1800_um 3 -3000 0)
+      (pin Oval[A]Pad_1300x1800_um 4 -1000 0)
+      (pin Oval[A]Pad_1300x1800_um 5 1000 0)
+      (pin Oval[A]Pad_1300x1800_um 6 3000 0)
+      (pin Oval[A]Pad_1300x1800_um 7 5000 0)
+      (pin Oval[A]Pad_1300x1800_um 8 7000 0)
+    )
+    (image "LED-5MM"
+      (outline (path signal 203.2  2844.8 -1905  2844.8 1905))
+      (outline (path signal 76.2  2050.05 0  1962.15 -555.01  1707.04 -1055.69  1309.69 -1453.04
+            809.01 -1708.15  254 -1796.05  -301.01 -1708.15  -801.692 -1453.04
+            -1199.04 -1055.69  -1454.15 -555.01  -1542.05 0  -1454.15 555.01
+            -1199.04 1055.69  -801.692 1453.04  -301.01 1708.15  254 1796.05
+            809.01 1708.15  1309.69 1453.04  1707.04 1055.69  1962.15 555.01))
+      (pin Round[A]Pad_1676.4_um 1 -1270 0)
+      (pin Round[A]Pad_1676.4_um 2 1270 0)
+    )
+    (padstack Round[A]Pad_1397_um
+      (shape (circle F.Cu 1397))
+      (shape (circle B.Cu 1397))
+      (attach off)
+    )
+    (padstack Round[A]Pad_1676.4_um
+      (shape (circle F.Cu 1676.4))
+      (shape (circle B.Cu 1676.4))
+      (attach off)
+    )
+    (padstack Round[A]Pad_1778_um
+      (shape (circle F.Cu 1778))
+      (shape (circle B.Cu 1778))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_1300x1800_um
+      (shape (path F.Cu 1300  0 -250  0 250))
+      (shape (path B.Cu 1300  0 -250  0 250))
+      (attach off)
+    )
+    (padstack "Oval[A][0,-250]Pad_1300x1800_um"
+      (shape (path F.Cu 1300  0 -500  0 0))
+      (shape (path B.Cu 1300  0 -500  0 0))
+      (attach off)
+    )
+    (padstack Oval[A][0,250]Pad_1300x1800_um
+      (shape (path F.Cu 1300  0 0  0 500))
+      (shape (path B.Cu 1300  0 0  0 500))
+      (attach off)
+    )
+    (padstack "Rect[A][0,-250]Pad_1300x1800_um"
+      (shape (rect F.Cu -650 -1150 650 650))
+      (shape (rect B.Cu -650 -1150 650 650))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1300x1800_um
+      (shape (rect F.Cu -650 -900 650 900))
+      (shape (rect B.Cu -650 -900 650 900))
+      (attach off)
+    )
+    (padstack Rect[A]Pad_1397x1397_um
+      (shape (rect F.Cu -698.5 -698.5 698.5 698.5))
+      (shape (rect B.Cu -698.5 -698.5 698.5 698.5))
+      (attach off)
+    )
+    (padstack "Via[0-1]_889:635_um"
+      (shape (circle F.Cu 889))
+      (shape (circle B.Cu 889))
+      (attach off)
+    )
+    (padstack "Via[0-1]_889:0_um"
+      (shape (circle F.Cu 889))
+      (shape (circle B.Cu 889))
+      (attach off)
+    )
+  )
+  (network
+    (net /GE864_ON_OFF
+      (pins "CON_E-CIAA2"-35 CON_SO104-15)
+    )
+    (net /GE864_RESET
+      (pins "CON_E-CIAA2"-33 CON_SO104-17)
+    )
+    (net /I2C_SCL
+      (pins "CON_E-CIAA1"-21 P2-3)
+    )
+    (net /I2C_SDA
+      (pins "CON_E-CIAA1"-19 P2-4)
+    )
+    (net /RS232_RXD
+      (pins "CON_E-CIAA1"-23 CON_SO101-16)
+    )
+    (net /RS232_TXD
+      (pins "CON_E-CIAA1"-25 CON_SO101-17)
+    )
+    (net /STATUS_LED
+      (pins R1-1 R2-1 CON_SO104-21)
+    )
+    (net /VCC_3.3V
+      (pins "CON_E-CIAA1"-1 "CON_E-CIAA2"-1)
+    )
+    (net /VCC_3.8V
+      (pins CON_SO104-1 CON_SO104-2 CON_SO104-3 CON_SO104-4)
+    )
+    (net /VCC_5V
+      (pins "CON_E-CIAA1"-2 "CON_E-CIAA2"-2 P2-1 D1-1)
+    )
+    (net GND
+      (pins Q1-3 R1-2 "CON_E-CIAA1"-4 "CON_E-CIAA1"-20 "CON_E-CIAA1"-22 "CON_E-CIAA1"-24
+        "CON_E-CIAA1"-26 "CON_E-CIAA1"-28 "CON_E-CIAA1"-30 "CON_E-CIAA1"-32 "CON_E-CIAA1"-38
+        "CON_E-CIAA1"-40 "CON_E-CIAA2"-3 "CON_E-CIAA2"-5 "CON_E-CIAA2"-7 "CON_E-CIAA2"-11
+        "CON_E-CIAA2"-13 "CON_E-CIAA2"-17 "CON_E-CIAA2"-19 "CON_E-CIAA2"-25 "CON_E-CIAA2"-27
+        "CON_E-CIAA2"-37 "CON_E-CIAA2"-39 CON_SO104-5 CON_SO104-6 CON_SO104-7 CON_SO104-8
+        CON_SO104-11 CON_SO104-12 CON_SO104-13 CON_SO104-14 CON_SO104-25 CON_SO104-26
+        CON_SO104-27 CON_SO104-28 CON_SO104-38 CON_SO104-39 CON_SO104-40 CON_SO101-5
+        CON_SO101-11 CON_SO101-12 CON_SO101-13 CON_SO101-14 CON_SO101-19 CON_SO101-25
+        CON_SO101-26 CON_SO101-27 CON_SO101-28 CON_SO101-38 CON_SO101-39 CON_SO101-40
+        P2-2 P2-7)
+    )
+    (net "N-000005"
+      (pins R3-1 D1-2)
+    )
+    (net "N-000007"
+      (pins Q1-2 R2-2)
+    )
+    (net "N-000009"
+      (pins Q1-1 R3-2)
+    )
+    (class kicad_default "" /GE864_ON_OFF /GE864_RESET /I2C_SCL /I2C_SDA /RS232_RXD
+      /RS232_TXD /STATUS_LED /VCC_3.3V /VCC_3.8V /VCC_5V GND "N-000005" "N-000007"
+      "N-000009"
+      (circuit
+        (use_via Via[0-1]_889:635_um)
+      )
+      (rule
+        (width 254)
+        (clearance 254.1)
+      )
+    )
+  )
+  (wiring
+  )
+)

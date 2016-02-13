@@ -1,0 +1,14 @@
+EESchema-DOCLIB  Version 2.0  Date: mar 10 nov 2015 16:01:19 ART
+#
+$CMP BAT_CONN
+D Battery Conneector rescatar
+K battery connector
+$ENDCMP
+#
+$CMP BC338
+D BC338, 25V Vce, 0.8A Ic, NPN, Small Signal Transistor,TO-92
+K BC338 NPN Transistor
+F http://pdf.datasheetcatalog.com/datasheet/motorola/BC338-16.pdf
+$ENDCMP
+#
+#End Doc Library
