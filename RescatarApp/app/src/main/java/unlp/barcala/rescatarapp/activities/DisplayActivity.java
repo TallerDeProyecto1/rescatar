@@ -153,7 +153,8 @@ public class DisplayActivity extends FragmentActivity implements GoogleMap.OnMap
         LatLngBounds bounds = builder.build();
         int padding = 80;
         CameraUpdate cu = CameraUpdateFactory.newLatLngBounds(bounds,padding);
-        mMap.animateCamera(cu);
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(bounds.getCenter(), 3));
+//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bounds.getCenter(), 3));
     }
 
     @Override
