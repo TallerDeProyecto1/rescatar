@@ -22,7 +22,7 @@
  ** 		1 si pasa el test
  ** 		0 si no lo pasa
  */
-uint8_t  GE_864_test(int32_t fd_i2c);
+uint8_t  GE_864_test(int32_t fd_i2c,int32_t fd_uart2);
 
 /*
  * La siguiente funcion debe iniciar el modulo para que no haya necesidad de

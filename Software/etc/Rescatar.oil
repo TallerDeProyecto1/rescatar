@@ -57,6 +57,7 @@ OSEK OSEK {
    RESOURCE = POSIXR;
 
    EVENT = POSIXE;
+   
 
    APPMODE = AppMode1;
 
@@ -83,15 +84,40 @@ OSEK OSEK {
       EVENT = POSIXE;
    }
    
-   TASK SerialEchoTask {
-    PRIORITY = 5;
+   TASK TelitSMSTask {
+    PRIORITY = 1;
     ACTIVATION = 1;
     STACK = 512;
     TYPE = EXTENDED;
-    SCHEDULE = FULL;
-    EVENT = POSIXE;
-    RESOURCE = POSIXR;
+    SCHEDULE = NON;
+    EVENT = EventOK;
+    EVENT = EventPromt;
+	EVENT = EventErrorCode;
+	EVENT = EventSMSSend;
 }
+
+TASK ListenTelitTask {
+      PRIORITY = 1;
+      ACTIVATION = 1;
+      STACK = 1024;
+      TYPE = EXTENDED;
+      SCHEDULE = NON;
+      RESOURCE = POSIXR;
+      EVENT = POSIXE;
+   }
+
+TASK TelitInitTask {
+    PRIORITY = 1;
+    ACTIVATION = 1;
+    STACK = 512;
+    TYPE = EXTENDED;
+    SCHEDULE = NON;
+ 	EVENT = EventOK;   
+}
+EVENT EventOK;
+EVENT EventPromt;
+EVENT EventErrorCode;
+EVENT EventSMSSend;
 
    TASK KeysTask {
       PRIORITY = 1;
@@ -110,20 +136,29 @@ OSEK OSEK {
       }
    }
    
+   ALARM ActivateListenTelitTask {
+      COUNTER = HardwareCounter;
+      ACTION = ACTIVATETASK {
+         TASK = ListenTelitTask;
+      }
+   }
+   
+   ALARM ActivateTelitInitTask {
+      COUNTER = HardwareCounter;
+      ACTION = ACTIVATETASK {
+         TASK = TelitInitTask;
+      }
+   }
+   
    ALARM ActivateKeysTask {
       COUNTER = HardwareCounter;
       ACTION = ACTIVATETASK {
          TASK = KeysTask;
       };
-      AUTOSTART = TRUE {
-         APPMODE = AppMode1;
-         ALARMTIME = 50;
-         CYCLETIME = 50;
-      };
    };
    
    COUNTER HardwareCounter {
-      MAXALLOWEDVALUE = 1000;
+      MAXALLOWEDVALUE = 10000;
       TICKSPERBASE = 1;
       MINCYCLE = 1;
       TYPE = HARDWARE;

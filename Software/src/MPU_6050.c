@@ -6,6 +6,11 @@
 
 /*==================[macros]=================================================*/
 
+#define GRAV 		9.81
+#define PESO 		0.95
+#define RADAGRA 	57.3   			// 180/pi
+#define PHI 		3.141592
+
 /*==================[internal data declaration]==============================*/
 
 /*en esta estructura guardo los offset luego de la calibracion*/
@@ -242,5 +247,8 @@ uint8_t  MPU_6050_setup(int32_t	fd_i2c,uint16 tick){
 	 */
 	MPU_6050_calibrate(fd_i2c);
 
+	/*
+	 * Compruebo que el sensor funciona correctamente
+	 */
 	return 1;
 }

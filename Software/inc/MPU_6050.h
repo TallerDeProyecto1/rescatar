@@ -121,14 +121,6 @@
 #define FS_SEL							250
 #define AFS_SEL			    			2
 
-
-
-#define GRAV 		-9.81
-#define PESO 		0.95
-#define RADAGRA 	57.3   			// 180/pi
-#define PHI 		3.141592
-
-
 /*==================[typedef]================================================*/
 typedef struct{
 	float xgyro;
