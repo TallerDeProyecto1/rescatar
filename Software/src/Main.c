@@ -44,7 +44,7 @@ char num[]="    ";
  */
 char message[120];
 char message2[120];
-char numEmerg[15]="2954372926";
+char numEmerg[15]="2346514794";
 char chNumEmerg[30];
 
 /*luces*/
@@ -303,9 +303,11 @@ TASK(KeysTask)
 	 *  */
 	if (TEC2_MASK & edgeUpKeys)
 	{
-		alarma=1;
-		countAlarm=0;
-		serialSend=1;
+		if(systemOn!=0){
+			alarma=1;
+			countAlarm=0;
+			serialSend=1;
+		}
 	}
 
 	/* TEC3: cambiar numero */
@@ -314,7 +316,8 @@ TASK(KeysTask)
 		CancelAlarm(ActivatePeriodicTask);
 		CancelAlarm(ActivateKeysTask);
 		serialSend=0;
-		outputs=0;
+		outputs=0b11001000;
+		ciaaPOSIX_write(fd_out, &outputs, 1);
 		ActivateTask(TelitSMSTask);
 	}
 
@@ -495,10 +498,12 @@ TASK(TelitSMSTask)
 						i++;
 					}
 				}
-
+				outputs=LEDS_RESET;
 			}
-			outputs=0b11010000;
-					ciaaPOSIX_write(fd_out, &outputs, 1);
+			else{
+				outputs=0b11010000;
+			}
+			ciaaPOSIX_write(fd_out, &outputs, 1);
 
 			/*
 			 * FORMATO DEL MSJ RECIBIDO PARA CAMBIR EL NUMERO DE EMERGENCIA:
